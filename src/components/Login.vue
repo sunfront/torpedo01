@@ -72,7 +72,7 @@
                   <div class="clear"></div>
                   <br>
                   <i class="fa fa-user fa-fw" />처음 방문하십니까? 
-                  <a href="@/components/JoinPost.vue">회원가입</a>
+                  <a href="./joinPost">회원가입</a>
                   <br>
                 </div>
               </div>
