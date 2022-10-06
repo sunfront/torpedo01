@@ -11,8 +11,15 @@ import axios from 'axios'
 import App from './App.vue'
 //sync(store, router)
 
+//axios.defaults.baseURL = "http://localhost:8080";
+
 // Create Vue Instance
 const app = createApp(App);
+
+app.config.globalProperties.axios=axios   // axios 전역사용
+app.config.globalProperties.store=store   // store 전역사용
+app.config.globalProperties.router=router // router 전역사용
+
 app.use(store);
 app.use(router);
 //app.use(VMdEditor);
@@ -20,6 +27,3 @@ app.use(router);
 
 app.mount('#app');
 
-app.config.globalProperties.axios=axios   // axios 전역사용
-app.config.globalProperties.store=store   // store 전역사용
-app.config.globalProperties.router=router // router 전역사용
